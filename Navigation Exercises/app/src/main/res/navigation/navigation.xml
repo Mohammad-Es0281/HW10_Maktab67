@@ -50,7 +50,12 @@
         android:name="com.example.android.navigation.GameWonFragment"
         android:label="@string/android_trivia"
         tools:layout="@layout/fragment_game_won">
-        <action
+        <argument
+            android:name="numQuestions"
+            app:argType="integer" />
+        <argument
+            android:name="numCorrect"
+            app:argType="integer" /><action
             android:id="@+id/action_gameWonFragment_to_gameFragment"
             app:destination="@id/gameFragment"
             app:popUpTo="@+id/titleFragment"/>
@@ -65,7 +70,6 @@
             app:destination="@id/gameFragment"
             app:popUpTo="@+id/titleFragment" />
     </fragment>
-
     <fragment
         android:id="@+id/aboutFragment"
         android:name="com.example.android.navigation.AboutFragment"
